@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday Yusra 🎉</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ffe6f0, #fff);
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      overflow: hidden;
+    }
+    h1 {
+      font-size: 3em;
+      color: #e91e63;
+      margin-top: 60px;
+    }
+    p {
+      max-width: 700px;
+      margin: 20px auto;
+      font-size: 1.2em;
+      line-height: 1.6;
+      color: #333;
+    }
+    .balloon {
+      width: 50px;
+      height: 70px;
+      background: pink;
+      border-radius: 50% 50% 45% 45%;
+      position: absolute;
+      animation: float 6s infinite ease-in-out;
+    }
+    @keyframes float {
+      0% { transform: translateY(100vh); }
+      100% { transform: translateY(-200px); }
+    }
+    .balloon::after {
+      content: '';
+      width: 2px;
+      height: 30px;
+      background: #888;
+      position: absolute;
+      left: 50%;
+      bottom: -30px;
+      transform: translateX(-50%);
+    }
+    .footer {
+      margin-top: 60px;
+      font-size: 1em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <h1>Happy Birthday Yusra 🎂🎈</h1>
+  <p>
+    Yusra, today is all about you — a girl with the sweetest heart, the brightest smile, and the purest soul. 💖<br><br>
+    You are not just my best friend… you are a part of my heart, my biggest support, and one of the most beautiful blessings in my life. 🌸✨<br><br>
+    Thank you for being the kind of friend who stays real, stays loyal, and loves without conditions. On your special day, I pray that all your dreams come true, and life gives you nothing but joy, peace, and endless love. 💫<br><br>
+    You deserve the entire universe — and I hope this year gives you just that and more.<br><br>
+    <strong>With all my love,<br>From Naima 💖</strong>
+  </p>
+
+  <!-- Balloons animation -->
+  <script>
+    for (let i = 0; i < 20; i++) {
+      let balloon = document.createElement("div");
+      balloon.className = "balloon";
+      balloon.style.left = Math.random() * 100 + "vw";
+      balloon.style.background = `hsl(${Math.random() * 360}, 70%, 80%)`;
+      balloon.style.animationDuration = (4 + Math.random() * 4) + "s";
+      document.body.appendChild(balloon);
+    }
+  </script>
+
+  <div class="footer">Made with 💖 by Naima</div>
+</body>
+</html>
